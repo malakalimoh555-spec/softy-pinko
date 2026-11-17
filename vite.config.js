@@ -5,7 +5,8 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-   base: '/softy-pinko/',
+  
+  base: process.env.GITHUB_ACTIONS ? '/softy-pinko/' : '/',
   plugins: [
     tailwindcss(),
     react(),
